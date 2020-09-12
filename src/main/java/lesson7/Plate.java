@@ -11,9 +11,30 @@ public class Plate {
         return food;
     }
 
+//    public void decreaseFood(int amount) {
+//        if (amount <= food){
+//            this.food -= amount;
+//        } else {
+//            System.out.println("no eat!");
+//        }
+//    }
+
     public void decreaseFood(int amount) {
-        this.food -= amount;
+        if (amount <= food){
+            this.food -= amount;
+        } else {
+            System.out.println("no eat!");
+        }
     }
+
+
+
+
+//    public boolean aaa (){
+//        if (10 <= food){
+//            return true;
+//        }
+//    }
 
     @Override
     public String toString() {
