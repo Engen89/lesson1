@@ -1,7 +1,6 @@
 package lesson8;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Logic {
     static int SIZE = 5;
@@ -21,11 +20,13 @@ public class Logic {
         isFinishedGame = true;
         printMap();
         if (checkWinLines(DOT_X, DOTS_TO_WIN)) {
-            System.out.println("Вы победили! Поздравляем!");
+            System.out.println("Игрок победил");
+            new GameOverWin();
             return;
         }
         if (isFull()) {
             System.out.println("Ничья");
+            new GameOverDraw();
             return;
         }
 
@@ -33,10 +34,12 @@ public class Logic {
         printMap();
         if (checkWinLines(DOT_O, DOTS_TO_WIN)) {
             System.out.println("Компьютер победил.");
+            new GameOverLoss();
             return;
         }
         if (isFull()) {
             System.out.println("Ничья");
+            new GameOverDraw();
             return;
         }
 
